@@ -1,0 +1,140 @@
+﻿<Window x:Class="VideoGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:VG="clr-namespace:VideoGrid;assembly=VGControl"
+        Title="VideoGrid" Height="1040" Width="1920"
+        Left="0" Top="0"
+        WindowStyle="ToolWindow"
+        ResizeMode="CanResizeWithGrip"
+        Background="Black"
+        Closed="WindowClosed" Loaded="OnGridLoaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="90*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Column="0" x:Name="Title">
+            <Label Content="SmartGrid" HorizontalAlignment="Left" Margin="-14,10,-52,0" FontSize="50"
+                   Foreground="White" VerticalAlignment="Top" Width="257" >
+                <Label.LayoutTransform>
+                    <RotateTransform Angle="-90"/>
+                </Label.LayoutTransform>
+            </Label>
+        </Grid>
+        <Grid Column="1" x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+            <Grid Row="0"  x:Name="VideoGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="33*"/>
+                    <RowDefinition Height="33*"/>
+                    <RowDefinition Height="33*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="33*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Grid Row="1" x:Name="InvestigationGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="15*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="9*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row ="0" Grid.Column="0" Name="CamFrame1" Source="{Binding Path=DisplayFrame1}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <TextBlock Name="CamName1" Text="{Binding CamName1}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="1" Name="CamFrame2" Source="{Binding Path=DisplayFrame2}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <TextBlock Name="CamName2" Text="{Binding CamName2}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="2" Name="CamFrame3" Source="{Binding Path=DisplayFrame3}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <TextBlock Name="CamName3" Text="{Binding CamName3}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="3" Name="CamFrame4" Source="{Binding Path=DisplayFrame4}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <TextBlock Name="CamName4" Text="{Binding CamName4}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="4" Name="CamFrame5" Source="{Binding DisplayFrame5}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="4">
+                    <TextBlock Name="CamName5" Text="{Binding CamName5}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="5" Name="CamFrame6" Source="{Binding DisplayFrame6}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="5">
+                    <TextBlock Name="CamName6" Text="{Binding CamName6}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="6" Name="CamFrame7" Source="{Binding DisplayFrame7}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="6">
+                    <TextBlock Name="CamName7" Text="{Binding CamName7}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="7" Name="CamFrame8" Source="{Binding DisplayFrame8}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="7">
+                    <TextBlock Name="CamName8" Text="{Binding CamName8}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>                
+            </Grid>
+            <Grid Row="2" x:Name="InvestigationGrid2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="15*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="9*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row ="0" Grid.Column="0" Name="CamFrame9" Source="{Binding Path=DisplayFrame9}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <TextBlock Name="CamName9" Text="{Binding CamName9}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="1" Name="CamFrame10" Source="{Binding Path=DisplayFrame10}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <TextBlock Name="CamName10" Text="{Binding CamName10}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="2" Name="CamFrame11" Source="{Binding Path=DisplayFrame11}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <TextBlock Name="CamName11" Text="{Binding CamName11}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="3" Name="CamFrame12" Source="{Binding Path=DisplayFrame12}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <TextBlock Name="CamName12" Text="{Binding CamName12}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="4" Name="CamFrame13" Source="{Binding DisplayFrame13}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="4">
+                    <TextBlock Name="CamName13" Text="{Binding CamName13}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="5" Name="CamFrame14" Source="{Binding DisplayFrame14}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="5">
+                    <TextBlock Name="CamName14" Text="{Binding CamName14}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="6" Name="CamFrame15" Source="{Binding DisplayFrame15}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="6">
+                    <TextBlock Name="CamName15" Text="{Binding CamName15}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+                <Image Grid.Row ="0" Grid.Column="7" Name="CamFrame16" Source="{Binding DisplayFrame16}" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Grid.Row="1" Grid.Column="7">
+                    <TextBlock Name="CamName16" Text="{Binding CamName16}" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
